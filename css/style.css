@@ -1,0 +1,202 @@
+* {
+    margin:0;
+    padding:0;
+    background-color: #FF5400;
+}
+
+@font-face {
+    font-family: SuperCandy;
+    src: url('../fonts/Super_Candy.ttf')
+}
+
+@font-face {
+    font-family: Telegraf-UltraBold;
+    src: url('../fonts/PPTelegraf-UltraBold.otf');
+}
+
+@font-face {
+    font-family: Telegraf-Regular;
+    src: url('../fonts/PPTelegraf-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Telegraf-UltraLight';
+    src: url('../fonts/PPTelegraf-UltraLight.otf');
+}
+
+/* UNIVERSAL: Top Title */
+.header {
+    padding: 20px;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header .title {
+    font-family: Telegraf-UltraBold;
+    font-size: 120px;
+    color: orange;
+    text-align: center;
+    padding: 10px 0px 0px;
+}
+
+/* UNIVERSAL: Navbar */
+.header .nav-bar {
+    list-style-type: none;
+    padding: 30px;
+    text-align: center;
+}
+
+.header .nav-bar li {
+    display: inline;
+    padding: 20px 20px;
+
+}
+
+.header .nav-bar li a {
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'SuperCandy';
+
+    color: #BC412B;
+    /*color: black;*/
+}
+
+.header .nav-bar li a:hover{
+    color: #E1CE7A;
+    opacity: 80;
+}
+
+.header .title a{
+    text-decoration: none;
+    color: black;
+}
+
+/* UNIVERSAL: Header*/
+#header {
+    font-size: 90px;
+    font-family: 'Telegraf-Regular';
+    text-align: center;
+    color: #FDD692;
+}
+
+/* HOME: Enter The Vault logo */
+.logo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.logo .enterTheVault{
+    width: 500px;
+    height: 500px;
+    display: block;
+    
+    animation: rotation 10s infinite linear;
+}
+
+/* VAULT: Product Card */
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 50px;
+}
+
+.products .product-card {
+    border: 2px solid #673147;
+    border-radius: 10px;
+    padding: 10px;
+    width: 690px;
+    height: 800px;
+    background-color: orange;
+    margin: 30px;
+}
+
+.products .product-card .product-image {
+    width: 600px;
+    height: 500px;
+    border: inherit;
+    border-radius: 20px;
+}
+
+.products .product-card .product-name {
+    padding-top: 20px;
+    padding-left: 30px;
+    font-size: 44px;
+    font-family: Telegraf-Regular;
+    background-color: inherit;
+}
+
+.products .product-card .product-price {
+    font-size: 20px;
+    font-family: Telegraf-UltraLight;
+    padding-top: 10px;
+    padding-left: 40px;
+    background-color: inherit;
+}
+
+.products .product-card .size {
+    background-color: inherit;
+    text-align: center;
+    font-size: 35px;
+    font-family: Telegraf-Regular;
+}
+
+.products .product-card .size-buttons {
+    background-color: inherit;
+    text-align: center;
+    width: 300px;
+    padding-left: 195px;
+    padding-top: 10px;
+}
+
+.products .product-card .size-buttons button {
+    font-size: 30px;
+    font-family: Telegraf-UltraLight;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;;
+}
+
+.products .product-card .size-buttons button:hover {
+    color: ivory;
+    background-color: black;
+    font-family: Telegraf-Regular;
+}
+
+.products .product-card .buy-button {
+    margin: 30px 5px 10px 600px;
+    text-align: right;
+    font-size: 30px;
+    font-family: Telegraf-UltraBold;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+.products .product-card .buy-button:hover {
+    color: ivory;
+    background-color: black;
+    font-family: SuperCandy;
+}
+/* OUR STORY: About */
+.about p {
+    font-family: Telegraf-UltraLight;
+    font-size: 24px;
+    padding: 20px 500px;
+    color: #3C1518;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
