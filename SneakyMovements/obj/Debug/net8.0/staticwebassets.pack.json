@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\SneakyMovements.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\JZG\\Pluralsight\\PetProject\\SneakyMovements\\SneakyMovements\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
       "Id": "C:\\Users\\JZG\\Pluralsight\\PetProject\\SneakyMovements\\SneakyMovements\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },

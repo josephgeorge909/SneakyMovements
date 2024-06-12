@@ -18,6 +18,21 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Vault()
+    {
+        return View();
+    }
+
+    public IActionResult Story()
+    {
+        return View();
+    }
+
+    public IActionResult Contact()
+    {
+        return View();
+    }
+    
     public IActionResult Privacy()
     {
         return View();

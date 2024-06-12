@@ -18,8 +18,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\JZG\Pluralsight\PetProject\SneakyMovements\SneakyMovements
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/JZG/Pluralsight/PetProject/SneakyMovements/SneakyMovements/Views/Contact/Contact.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb250YWN0LmNzaHRtbA==
+[C:/Users/JZG/Pluralsight/PetProject/SneakyMovements/SneakyMovements/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/JZG/Pluralsight/PetProject/SneakyMovements/SneakyMovements/Views/Home/Index.cshtml]
@@ -30,20 +30,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/JZG/Pluralsight/PetProject/SneakyMovements/SneakyMovements/Views/Home/Story.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JZG/Pluralsight/PetProject/SneakyMovements/SneakyMovements/Views/Home/Vault.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/JZG/Pluralsight/PetProject/SneakyMovements/SneakyMovements/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/JZG/Pluralsight/PetProject/SneakyMovements/SneakyMovements/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/JZG/Pluralsight/PetProject/SneakyMovements/SneakyMovements/Views/Story/Story.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcnlcU3RvcnkuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/JZG/Pluralsight/PetProject/SneakyMovements/SneakyMovements/Views/Vault/Vault.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmF1bHRcVmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/JZG/Pluralsight/PetProject/SneakyMovements/SneakyMovements/Views/_ViewImports.cshtml]

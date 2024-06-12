@@ -1,6 +1,18 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
+<link href="~/css/style.css" rel="stylesheet">
+<head>
+    <div class="header">
+        <nav>
+            <ul class="nav-bar">
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="Vault">Vault</a></li>
+                <li><a asp-controller="Home" asp-action="Story">Our Story</a></li>
+                <li><a asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</head>
 <div class="container">
     @RenderBody()
 </div>
