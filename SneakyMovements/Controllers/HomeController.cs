@@ -7,15 +7,27 @@ namespace SneakyMovements.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly SneakyMovementsDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, SneakyMovementsDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index()
     {
-        return View();
+        var showcaseProducts = new List<Product>();
+        var products = _context.Products.ToList();
+        foreach (var product in products)
+        {
+            if (product.OnSite.Equals(true) && product.OnHomePage.Equals(true))
+            {
+                showcaseProducts.Add(product);
+            }
+        }
+        
+        return View(showcaseProducts);
     }
 
     public IActionResult Vault()

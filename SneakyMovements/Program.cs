@@ -1,4 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using SneakyMovements.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<SneakyMovementsDbContext>((provider, options) => {
+    IConfiguration config = provider.GetRequiredService<IConfiguration>();
+    string connectionString = config.GetConnectionString("DefaultConnection");
+    options.UseSqlServer(connectionString);                             
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

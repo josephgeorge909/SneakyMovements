@@ -3,13 +3,52 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <title></title>
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <head>
+        <title></title>
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            .column {
+              float: left;
+              width: 33.33%;
+              padding: 10px;
+            }
+            
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            /* Style the counter cards */
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              padding: 16px;
+              text-align: center;
+              background-color: #f1f1f1;
+            }
+        </style>
+    </head>
 <body>
-<div>
-    
-</div>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="~/img/AirJordan1-Spiderverse.jpeg" alt="Denim Jeans" style="width:100%">
+                <h1>Jordan 1 - Into The Spiderverse</h1>
+            </div>    
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="~/img/AirJordan4-Psg.jpeg" alt="Denim Jeans" style="width:100%">
+                <h1>Jordan 4 Retro x PSG</h1>
+            </div>        
+        </div>
+        <div class="column">
+            <div class="card">
+                <img src="~/img/AirJordan5-Craft.jpeg" alt="Denim Jeans" style="width:100%">
+                <h1>Jordan 5 Craft</h1>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
