@@ -1,6 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SneakyMovements.Models;
+using SneakyMovements.ViewModels;
 
 namespace SneakyMovements.Controllers;
 
@@ -54,5 +56,30 @@ public class HomeController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+
+    public IActionResult ProductDetails(int id)
+    {
+        var productDetails = _context.Products
+            .Where(x => x.Id.Equals(id))
+            .Include(x => x.ProductDetails)
+            .Select(x => new
+            {
+                Name = x.Name,
+                Description = x.ProductDetails.Description,
+                Price = x.ProductDetails.Price,
+                ImageName = x.ImageName
+            })
+            .FirstOrDefault();
+
+        var productDetailVm = new ProductDetailVm()
+        {
+            Name = productDetails.Name,
+            Description = productDetails.Description,
+            Price = productDetails.Price,
+            ImageName = productDetails.ImageName
+        };
+        
+        return View(productDetailVm);
     }
 }

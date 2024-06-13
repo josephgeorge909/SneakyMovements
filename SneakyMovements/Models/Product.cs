@@ -7,13 +7,15 @@ public partial class Product
 {
     public int Id { get; set; }
 
-    public string? Name { get; set; }
+    public string Name { get; set; } = null!;
 
-    public int? ProductDetailsId { get; set; }
+    public int ProductDetailsId { get; set; }
 
-    public bool? OnSite { get; set; }
+    public bool OnSite { get; set; }
 
-    public bool? OnHomePage { get; set; }
+    public bool OnHomePage { get; set; }
 
-    public virtual ProductDetail? ProductDetails { get; set; }
+    public string? ImageName { get; set; }
+
+    public virtual ProductDetail ProductDetails { get; set; } = null!;
 }

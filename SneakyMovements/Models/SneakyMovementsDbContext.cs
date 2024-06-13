@@ -21,7 +21,7 @@ public partial class SneakyMovementsDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=COMP-JZG-RDP;Integrated Security=True;User ID=RH\\JZG;Encrypt=false");
+        => optionsBuilder.UseSqlServer("Data Source=COMP-JZG-RDP;Integrated Security=True;User ID=RH\\JZG;Encrypt=false;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -29,12 +29,16 @@ public partial class SneakyMovementsDbContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK_Products_Id");
 
+            entity.Property(e => e.ImageName)
+                .HasMaxLength(50)
+                .IsUnicode(false);
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .IsUnicode(false);
 
             entity.HasOne(d => d.ProductDetails).WithMany(p => p.Products)
                 .HasForeignKey(d => d.ProductDetailsId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Products_ProductDetailsId");
         });
 
