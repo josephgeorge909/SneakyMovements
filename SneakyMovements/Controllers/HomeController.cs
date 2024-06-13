@@ -76,7 +76,7 @@ public class HomeController : Controller
         {
             Name = productDetails.Name,
             Description = productDetails.Description,
-            Price = productDetails.Price,
+            Price = Math.Round(productDetails.Price, 2),
             ImageName = productDetails.ImageName
         };
         

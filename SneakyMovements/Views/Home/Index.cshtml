@@ -8,53 +8,52 @@
     <meta charset="UTF-8">
     <link href="css/style.css" rel="stylesheet">
     <style>
-        .column {
-          float: left;
-          width: 33.33%;
-          padding: 10px;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 50px;
+            padding-top: 50px;
+            width: 1000px;
+            margin: auto;
         }
         
-        /* Clear floats after the columns */
-        .row:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
-        
-        /* Style the counter cards */
         .card {
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          padding: 16px;
-          text-align: center;
-          background-color: #f1f1f1;
+            width: 200px;
+            height: 300px;
+        }
+        
+        .card a {
+            text-decoration: none;
+        }
+        
+        .card img {
+            height: 200px;
+        }
+        
+        .card h1 {
+            font-size: 15px;
+            color: black;
+            text-align: center;
+            padding-top: 10px;
         }
     </style>
 </head>
 <body>
-<div class="text-center">
-    <section class="header">
-        <a asp-controller="Home" asp-action="Story">
-            <h1 class="title">Sneaky Movements</h1>
-        </a>
-    </section>
-    <section>
-        <div class="row">
-            @foreach (var product in Model)
-            {
-                <div class="column">
-                    <a asp-controller="Home" asp-action="ProductDetails" asp-route-id="@product.Id" >
-                        <div class="card">
-                            <img src="~/img/@product.ImageName" alt="Shoes" style="width:100%">
-                            <h1>@product.Name</h1>
-                        </div>
-                    </a>
-                </div>
-            }
-        </div>
-    </section>
-    <section class="logo">
+<div>
+    <div class="container">
+        @foreach (var product in Model)
+        {
+            <div class="card">
+                <a asp-controller="Home" asp-action="ProductDetails" asp-route-id="@product.Id" >
+                    <img src="~/img/@product.ImageName" alt="Shoes" style="width:100%">
+                    <h1>@product.Name</h1>
+                </a>
+            </div>
+        }
+    </div>
+    <div class="logo">
         <a asp-controller="Home" asp-action="Vault"><img class="enterTheVault" src="img/enterTheVault.png"></a>
-    </section>
+    </div>
 </div>
 
 </body>

@@ -5,13 +5,60 @@
 <html>
     <head>
         <title></title>
+        <style>
+            .container {
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 15px;
+              display: flex;
+            }
+            .left-column {
+              width: 65%;
+              position: relative;
+              padding-left: 35px;
+            }
+            
+            .product-image{
+                width: 800px;
+            }
+            
+            .product-description {
+              margin-bottom: 20px;
+            }
+            .product-description h1 {
+              font-weight: 300;
+              font-size: 52px;
+              color: black;
+              letter-spacing: -2px;
+            }
+            .product-description p {
+              font-size: 16px;
+              font-weight: 300;
+              color: black;
+              line-height: 24px;
+            }
+            
+            
+        </style>
+        
     </head>
     <body>
-        <div>
-            <img src="~/img/@Model.ImageName" alt="SHOES"/>
-            <p>@Model.Name</p>
-            <p>@Model.Description</p>
-            <p>@Model.Price</p>
-        </div>
+        <main class="container">
+            <div class="right-column">
+                <img class="product-image" src="~/img/@Model.ImageName" alt="SHOES"/>
+            </div>
+            <div class="left-column">
+                <div class="product-description">
+                    <h1>@Model.Name</h1>
+                    <br/>
+                    <br/>
+                    <h2>£@Model.Price</h2>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <p>@Model.Description</p>
+                </div>
+            </div>
+        </main>
     </body>
 </html>

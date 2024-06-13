@@ -20,7 +20,7 @@
 }
 
 @font-face {
-    font-family: 'Telegraf-UltraLight';
+    font-family: Telegraf-UltraLight;
     src: url('../fonts/PPTelegraf-UltraLight.otf');
 }
 
@@ -99,7 +99,6 @@
 }
 
 /* VAULT: Product Card */
-
 
 /* OUR STORY: About */
 .about p {
